@@ -1,0 +1,18 @@
+# system file
+*.DS_Store
+
+
+# compiler tool file	
+.codekit-cache
+config.codekit
+config.rb
+.sass-cache/
+font/fontcustom/.fontcustom-manifest.json
+
+
+# node file	
+node_modules/
+
+
+#bower files
+bower_components/

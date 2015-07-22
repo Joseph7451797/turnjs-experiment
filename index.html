@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-tw"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+
+    <title>TurnJS翻書範例</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+    <!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+    <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+    <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+
+</head>
+<body>
+
+    <div class="flipbook-viewport">
+      <div class="container">
+        <p>
+            <a href="http://bootsnipp.com/iframe/3xPjo" target="_blank">View Full Screen </a>
+            <i>(Req'd to test on mobile device)</i>
+        </p>
+            
+        <div class="flipbook">
+            <div style="background-image:url(http://www.turnjs.com/pics/book1.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book2.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book3.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book4.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book5.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book6.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book7.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book8.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book9.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book10.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book11.jpg)"></div>
+            <div style="background-image:url(http://www.turnjs.com/pics/book12.jpg)"></div>
+        </div>
+      </div>
+    </div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="http://www.turnjs.com/extras/modernizr.2.5.3.min.js"></script>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+    // Create the flipbook
+    $('.flipbook').turn({
+        width:922,    // Width
+        height:600,    // Height
+        elevation: 50,    // Elevation
+        gradients: true,  // Enable gradients
+        autoCenter: true  // Auto center this flipbook
+    });
+}
+
+// Load the HTML4 version if there's not CSS transform
+yepnope({
+    test : Modernizr.csstransforms,
+	yep: ['http://www.turnjs.com/lib/turn.min.js'],
+	nope: ['http://www.turnjs.com/lib/turn.html4.min.js'],
+	both: ['http://www.turnjs.com/css/basic.css'],
+	complete: loadApp
+});
+
+</script>
